@@ -40,36 +40,24 @@
   .addEventListener("submit", function(e){
 
     e.preventDefault();
-
     const farmer = {
-
       name: document.getElementById("regName").value,
-
       farm: document.getElementById("farmName").value,
-
       phone: document.getElementById("regPhone").value,
-
       email: document.getElementById("regEmail").value,
-
       password: document.getElementById("regPassword").value
 
     };
 
     // SAVE FARMER
     localStorage.setItem("farmer", JSON.stringify(farmer));
-
     alert("Registration Successful ✅");
-
     // RETURN TO LOGIN
     container.classList.remove("active");
-
     isRegister = false;
-
     switchBtn.innerText = "Register";
-
     overlayText.innerText =
     "Don't have an account yet? Register as a farmer and start selling produce.";
-
   });
 
   // LOGIN FARMER
