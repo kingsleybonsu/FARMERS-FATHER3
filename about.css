@@ -1,0 +1,272 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7fdf9;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+/* Navigation bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #22543d;
+  padding: 1rem 1.5rem;
+}
+
+.nav-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: rgb(7, 6, 6);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links .active {
+  border-bottom: 2px solid #9ae6;
+}
+
+
+/* Header */
+.header {
+  /* background-color: linear-gradient( 135deg #166534 #15803d); */
+  background-color: #36926d;
+  color: white;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.header p {
+  margin-top: 0.5rem;
+}
+
+/* Layout */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+
+.section h2 {
+  color: #3a8b63;
+  margin-bottom: 0.5rem;
+}
+
+/* List */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background: #387e70;
+  margin: 0.5rem 0;
+  padding: 0.75rem;
+  border-left: 4px solid #2f855a;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #e6fffa;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+
+/* Image section */
+.image-section {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.image-caption {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* =========================
+   Mobile responsiveness
+   ========================= */
+
+/* Small screens (phones) */
+@media (max-width: 600px) {
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .section h2 {
+    font-size: 1.2rem;
+  }
+
+  li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 900px) {
+
+  .container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .nav-links {
+    gap: 0.8rem;
+  }
+}
+
+/* Hamburger basics */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    /* flex-direction: column; */
+    width: 100%;
+    background-color: #22543d;
+    padding: 1rem 0;
+  }
+
+  .nav-links li {
+    text-align: center;
+    padding: 0.6rem 0;
+  }
+
+  /* Show menu when checkbox is checked */
+  }
+
+  /*/////////////////////////////////*/
+  /* NAV BASE */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* NAV LINKS (DESKTOP) */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* HAMBURGER ICON */
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* HIDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 110px;
+    right: 0;
+    background: white;
+    width: 200px;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  /* SHOW MENU WHEN CLICKED */
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 0;
+  }
+}

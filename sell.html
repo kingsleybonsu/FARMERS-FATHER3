@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sell Produce | Farmers Father</title>
+  <link rel="stylesheet" href="sell.css">
+</head>
+
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="container nav">
+
+    <h1 class="logo">Farmers Father</h1>
+
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">☰</label>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="market.html">Browse</a>
+    </div>
+
+  </div>
+</header>
+
+<!-- ===== PAGE TITLE ===== -->
+<section class="page-title container">
+  <h1>Sell Your Produce</h1>
+  <p>List your farm produce and connect directly with buyers.</p>
+</section>
+
+<!-- ===== FORM ===== -->
+<section class="form-section container">
+  <form class="form" id="sellForm">
+
+    <div class="form-group">
+      <label>Farmer Name</label>
+      <input type="text" id="farmer" required />
+    </div>
+
+    <div class="form-group">
+      <label>Produce Name</label>
+      <input type="text" id="name" required />
+    </div>
+
+    <div class="form-group">
+      <label>Quantity</label>
+      <input type="text" id="quantity" required />
+    </div>
+
+    <div class="form-group">
+      <label>Location</label>
+      <input type="text" id="location" required />
+    </div>
+
+    <div class="form-group">
+      <label>Category</label>
+      <select id="category">
+        <option value="Fruits">Fruits</option>
+        <option value="Tubers">Tubers</option>
+        <option value="Livestock">Livestock</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Phone / WhatsApp Number</label>
+      <input type="tel" id="phone" required />
+    </div>
+
+    <div class="form-group">
+      <label>Price</label>
+      <input type="text" id="price" placeholder="Optional" />
+    </div>
+
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" id="date" />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" id="email" />
+    </div>
+
+    <!-- IMAGE UPLOAD -->
+    <div class="form-group">
+      <label>Upload Product Image</label>
+      <input type="file" id="image" accept="image/*" required />
+    </div>
+
+    <!-- IMAGE PREVIEW -->
+    <div class="image-preview">
+      <img id="preview" src="" alt="Preview" style="display:none;">
+    </div>
+
+    <button type="submit" class="btn-submit">
+      Submit Produce
+    </button>
+
+  </form>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>Farmers Father — Helping farmers sell before food spoils 🇬🇭</p>
+</footer>
+<script src="sell.js"></script>
+</body>
+</html>
