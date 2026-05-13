@@ -45,3 +45,18 @@ overlay.addEventListener("click", () => {
   sidebar.classList.remove("active");
   overlay.classList.remove("active");
 });
+
+/**splash screen */
+
+window.addEventListener("load", () => {
+
+  const splash = document.getElementById("splash-screen");
+
+  setTimeout(() => {
+
+    splash.style.opacity = "1";
+    splash.style.visibility = "hidden";
+
+  }, 2500);
+
+});
