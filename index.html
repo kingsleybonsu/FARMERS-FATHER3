@@ -9,49 +9,58 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 </head>
 
+
+  <body>
+
   <!-- SIDEBAR -->
 
 <div class="sidebar" id="sidebar">
-        <div class="sidebar-top">
-            <a href="index.html" class="logo">
-              <img src="images/logo.png" alt="Farmers Father Logo">
-            </a>
-    <span class="close-btn" id="closeBtn">
-    ✕
-    </span>
+  <div class="sidebar-top">
+      <a href="index.html" class="logo">
+      <img src="https://www.shutterstock.com/image-vector/colorful-wicker-basket-filled-fresh-260nw-2620716981.jpg" alt="Farmers Father Logo">
+      </a>
+   <span class="close-btn" id="closeBtn">
+      ✕
+   </span>
+  </div>
+  <div class="sidebar-links">
+
+   <a href="about.html"> About Us</a>
+
+    <a href="market.html">
+  <i class="fas fa-store"></i> Browse Produce
+</a>
+
+    <a href="farmers-register.html">
+    Become a Farmer
+    </a>
+
+   <a href="buyer-register.html">
+    Join as Buyer
+    </a>
+
+    <a href="farmers-dashboard.html">
+  <i class="fas fa-chart-line"></i> Dashboard
+</a>
+
+    <a href="sell.html">
+  <i class="fas fa-seedling"></i> Sell Produce
+</a>
     </div>
 
-        <div class="sidebar-links">
-            <a href="about.html"> About Us</a>
-             <a href="market.html"> Browse Produce</a>
-            <a href="farmers-register.html">
-            Become a Farmer
-                </a>
-              <a href="buyer-register.html">
-             Join as Buyer
-               </a>
-             <a href="farmers-dashboard.html">
-             Dashboard
-                </a>
-               <a href="sell.html">
-                Sell Produce
-                </a>
-            </div>
-
-               </div>
+    </div>
 
   <!-- OVERLAY -->
 
  <div class="overlay" id="overlay"></div>
 
-  <body>
     <!-- SPLASH SCREEN -->
 
 <div id="splash-screen">
 
   <div class="splash-content">
 
-    <img src="https://www.shutterstock.com/image-vector/colorful-wicker-basket-filled-fresh-260nw-2620716981.jpg" alt="Farmers Father Logo">
+    <img src="https://dcassetcdn.com/design_img/2970851/651658/651658_16384016_2970851_e967650f_image.jpg" alt="Farmers Father Logo">
 
     <h1>Farmers Father</h1>
 
@@ -65,7 +74,7 @@
   <div class="container nav">
 
     <a href="index.html" class="logo">
-  <img src="https://www.shutterstock.com/image-vector/colorful-wicker-basket-filled-fresh-260nw-2620716981.jpg" alt="Farmers Father Logo">
+  <img src="https://dcassetcdn.com/design_img/2970851/651658/651658_16384016_2970851_e967650f_image.jpg" alt="Farmers Father Logo">
       </a>
 
     <!-- MENU BUTTON -->
@@ -75,7 +84,9 @@
 
     <!-- NAV LINKS -->
     <div class="nav-links">
-      <a href="farmers-dashboard.html">Records</a>
+       <button class="logout-btn" onclick="logoutBuyer()">
+      Logout
+    </button>
       <a href="sell.html">Sell</a>
     </div>
 
@@ -83,7 +94,7 @@
 </header>
 
     <!-- HERO -->
-
+<!-- 
    <section class="hero">
     <div class="container">
       <h2>Fresh Farm Produce.<br>Just like Your Home Market. <br>Payless Sell All. </h2>
@@ -92,70 +103,115 @@
    <div class="hero-buttons">
     <a href="farmers-register.html" class="btn btn-primary">Become a Farmer</a>
     <a href="buyer-register.html" class="btn btn-primary">Join as Buyer</a>
-    <!-- <a href="market.html" class="btn btn-outline">Browse Produce</a> -->
-    <!-- <a href="registration.html" class="btn btn-outline">Get Registered</a> -->
+    <a href="market.html" class="btn btn-outline">Browse Produce</a>
+    <a href="registration.html" class="btn btn-outline">Get Registered</a>
    </div>
    </div>
 
-   </section>
+   </section> -->
+   <!-- <section class="stats">
+
+  <div>
+    <h2>500+</h2>
+    <p>Farmers</p>
+  </div>
+
+  <div>
+    <h2>10K+</h2>
+    <p>Buyers</p>
+  </div>
+
+</section> -->
+   
 
 
    <!-- PRODUCE -->
 
     <section class="section">
-     <div class="container">
-  <h3 style="text-align:center; margin-bottom:30px;">
-    Choose the Category You Are Interested in Buying From
-  </h3>
 
+  <div class="container">
 
-       <div class="grid grid-3">
+    <h3 style="text-align:center; margin-bottom:30px;">
+      Choose the Category You Are Interested in Buying From
+    </h3>
 
-  <div class="card">
+    <div class="grid grid-3">
 
-    <a href="market.html?category=Fruits">
-      <img src="https://images.unsplash.com/photo-1594057687713-5fd14eed1c17?q=80&w=327&auto=format&fit=crop" alt="Fruits">
-    </a>
+      <!-- FRUITS -->
+      <div class="card">
 
-    <h4>Fruits and Vegetables</h4>
-
-    <div class="card-actions">
-      <a href="market.html?category=Fruits" class="btn-small btn-green">
-        Buy Fruits
-      </a>
-    </div>
-  </div>
-
-          <div class="card">
-
-    <a href="market.html?category=Tubers">
-      <img src="https://agrictoday.com.gh/wp-content/uploads/2021/11/tubers-of-yam.jpg" alt="Tubers">
-    </a>
-
-    <h4>Tuber Crops and Cereals</h4>
-
-    <div class="card-actions">
-      <a href="market.html?category=Tubers" class="btn-small btn-green">
-        Buy Tubers
-      </a>
-    </div>
-
-  </div>
-
-    <div class="card">
-     <a href="market.html?category=Livestock">
-      <img src="https://www.animalspot.net/wp-content/uploads/2019/07/Farm-Animals-Picture.jpg" alt="Livestock">
-      </a>
-      <h4>Livestock</h4>
-      <div class="card-actions">
-        <a href="market.html?category=Livestock" class="btn-small btn-green">
-        Buy Livestock
+        <a href="#" class="protected-link" data-link="market.html?category=Fruits">
+          <img src="https://images.unsplash.com/photo-1594057687713-5fd14eed1c17?q=80&w=327&auto=format&fit=crop" alt="Fruits">
         </a>
+        <h4>Fruits and Vegetables</h4>
+
+        <div class="card-actions">
+         <a href="#" class="btn-small btn-green protected-link" data-link="market.html?category=Fruits">
+         Buy Fruits
+          </a>
+
+        </div>
+
       </div>
+
+      <!-- TUBERS -->
+      <div class="card">
+
+        <a href="#" class="protected-link" data-link="market.html?category=Tubers" >
+          <img src="https://agrictoday.com.gh/wp-content/uploads/2021/11/tubers-of-yam.jpg" alt="Tubers">
+        </a>
+
+        <h4>Tuber Crops and Cereals</h4>
+
+        <div class="card-actions">
+
+          <a
+            href="#"
+            class="btn-small btn-green protected-link"
+            data-link="market.html?category=Tubers"
+          >
+            Buy Tubers
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- LIVESTOCK -->
+      <div class="card">
+
+        <a
+          href="#"
+          class="protected-link"
+          data-link="market.html?category=Livestock"
+        >
+          <img
+            src="https://www.animalspot.net/wp-content/uploads/2019/07/Farm-Animals-Picture.jpg"
+            alt="Livestock"
+          >
+        </a>
+
+        <h4>Livestock</h4>
+
+        <div class="card-actions">
+
+          <a
+            href="#"
+            class="btn-small btn-green protected-link"
+            data-link="market.html?category=Livestock"
+          >
+            Buy Livestock
+          </a>
+
+        </div>
+
+      </div>
+
     </div>
 
-</div>
-    </section>
+  </div>
+
+</section>
 
       <main class="contain">
 
@@ -203,7 +259,6 @@
       <h3>Quick Links</h3>
 
       <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="market.html">Marketplace</a></li>
         <li><a href="sell.html">Sell Produce</a></li>
         <li><a href="dashboard.html">Dashboard</a></li>
@@ -269,6 +324,11 @@
   </div>
 
      </footer>
+     <script src="auth.js"></script>
+
+<script>
+  protectBuyerPage();
+</script>
      <script src="index.js"></script>
     </body>
 </html>

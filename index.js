@@ -54,9 +54,53 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
 
-    splash.style.opacity = "1";
+    splash.style.opacity = "0";
     splash.style.visibility = "hidden";
 
   }, 2500);
+
+});
+
+/* PROTECT CATEGORY CARDS */
+
+const protectedLinks =
+document.querySelectorAll(".protected-link");
+
+protectedLinks.forEach((link) => {
+
+  link.addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    // CHECK LOGIN STATUS
+    const buyerLoggedIn =
+      localStorage.getItem("buyerLoggedIn");
+
+    const farmerLoggedIn =
+      localStorage.getItem("farmerLoggedIn");
+
+    // IF NOT LOGGED IN
+    if (!buyerLoggedIn && !farmerLoggedIn) {
+
+      alert("Please login or signup first");
+
+      // REDIRECT TO BUYER LOGIN
+      window.location.href =
+        "buyer-register.html";
+
+    }
+
+    // IF LOGGED IN
+    else {
+
+      // OPEN THE REAL PAGE
+      const realLink =
+        this.getAttribute("data-link");
+
+      window.location.href = realLink;
+
+    }
+
+  });
 
 });

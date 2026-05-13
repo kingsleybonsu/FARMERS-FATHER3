@@ -107,14 +107,6 @@ function displayProducts(items){
   </a>
 
 </div>
-
-<a 
-  href="farmer-profile.html?phone=${product.phone}"
-  class="view-farmer"
->
-  View Farmer
-</a>
-
         </div>
 
       </div>

@@ -1,11 +1,11 @@
-// MAIN ELEMENTS
 const container = document.getElementById("container");
 const switchBtn = document.getElementById("switchBtn");
 const overlayText = document.getElementById("overlayText");
 
 let isRegister = false;
 
-// SWITCH LOGIN ↔ REGISTER
+/* SWITCH LOGIN ↔ REGISTER */
+
 switchBtn.addEventListener("click", () => {
   container.classList.toggle("active");
 
@@ -16,7 +16,7 @@ switchBtn.addEventListener("click", () => {
     switchBtn.innerText = "Login";
 
     overlayText.innerText =
-      "Already have an account? Login and continue managing your produce.";
+      "Already have an account? Login and continue browsing produce.";
   }
 
   // LOGIN MODE
@@ -24,55 +24,68 @@ switchBtn.addEventListener("click", () => {
     switchBtn.innerText = "Register";
 
     overlayText.innerText =
-      "Don't have an account yet? Register as a farmer and start selling produce.";
+      "New buyer? Register and start connecting directly with farmers.";
   }
 });
 
-// REGISTER FARMER
+/*
+   BUYER REGISTER
+*/
+
 document
   .getElementById("registerForm")
   .addEventListener("submit", function (e) {
     e.preventDefault();
-    const farmer = {
+
+    const buyer = {
       name: document.getElementById("regName").value,
-      farm: document.getElementById("farmName").value,
+
       phone: document.getElementById("regPhone").value,
+
       email: document.getElementById("regEmail").value,
+
       password: document.getElementById("regPassword").value,
     };
 
-    // SAVE FARMER
-    localStorage.setItem("farmer", JSON.stringify(farmer));
-    alert("Registration Successful ✅");
+    // SAVE BUYER
+    localStorage.setItem("buyer", JSON.stringify(buyer));
+
+    alert("Buyer Registration Successful ✅");
+
     // RETURN TO LOGIN
     container.classList.remove("active");
+
     isRegister = false;
+
     switchBtn.innerText = "Register";
+
     overlayText.innerText =
-      "Don't have an account yet? Register as a farmer and start selling produce.";
+      "New buyer? Register and start connecting directly with farmers.";
   });
 
-// LOGIN FARMER
+/* 
+   BUYER LOGIN
+ */
+
 document.getElementById("loginForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const phone = document.getElementById("loginPhone").value;
-
   const password = document.getElementById("loginPassword").value;
 
-  // GET SAVED FARMER
-  const savedFarmer = JSON.parse(localStorage.getItem("farmer"));
+  // GET SAVED BUYER
+  const savedBuyer = JSON.parse(localStorage.getItem("buyer"));
 
   // CHECK LOGIN
   if (
-    savedFarmer &&
-    savedFarmer.phone === phone &&
-    savedFarmer.password === password
+    savedBuyer &&
+    savedBuyer.phone === phone &&
+    savedBuyer.password === password
   ) {
     // SAVE LOGIN STATUS
-    localStorage.setItem("farmerLoggedIn", true);
+    localStorage.setItem("buyerLoggedIn", true);
 
-    alert("Login Successful ✅");
+    alert("Buyer Login Successful ✅");
 
     // REDIRECT
     window.location.href = "index.html";
