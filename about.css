@@ -100,7 +100,8 @@ li {
 .footer {
   text-align: center;
   padding: 1rem;
-  background: #e6fffa;
+  color: white;
+  background:#1f2937;
   margin-top: 2rem;
   font-size: 0.9rem;
 }
@@ -126,9 +127,6 @@ li {
 }
 
 
-/* =========================
-   Mobile responsiveness
-   ========================= */
 
 /* Small screens (phones) */
 @media (max-width: 600px) {

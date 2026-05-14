@@ -9,7 +9,7 @@ const form = document.getElementById("sellForm");
 const imageInput = document.getElementById("image");
 const preview = document.getElementById("preview");
 
-// ===== IMAGE PREVIEW =====
+//IMAGE PREVIEW
 imageInput.addEventListener("change", function() {
   const file = this.files[0];
 
@@ -25,7 +25,7 @@ imageInput.addEventListener("change", function() {
   }
 });
 
-// ===== FORM SUBMIT =====
+//FORM SUBMIT 
 form.addEventListener("submit", function(e) {
   e.preventDefault();
 
@@ -41,7 +41,7 @@ form.addEventListener("submit", function(e) {
   reader.onload = function() {
 
     const product = {
-      id: Date.now(), // unique ID
+      id: Date.now(),
       farmer: document.getElementById("farmer").value,
       name: document.getElementById("name").value,
       quantity: document.getElementById("quantity").value,
@@ -49,8 +49,6 @@ form.addEventListener("submit", function(e) {
       category: document.getElementById("category").value,
       phone: document.getElementById("phone").value,
       price: document.getElementById("price").value,
-      date: document.getElementById("date").value,
-      email: document.getElementById("email").value,
       image: reader.result
     };
 
@@ -60,7 +58,7 @@ form.addEventListener("submit", function(e) {
 
     localStorage.setItem("products", JSON.stringify(products));
 
-    alert("✅ Product added successfully!");
+    alert("Product added successfully!");
 
     form.reset();
     preview.style.display = "none";

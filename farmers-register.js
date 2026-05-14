@@ -75,7 +75,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
     alert("Login Successful ✅");
 
     // REDIRECT
-    window.location.href = "index.html";
+    window.location.href = "farmers-dashboard.html";
   } else {
     alert("Invalid Phone Number or Password ❌");
   }
